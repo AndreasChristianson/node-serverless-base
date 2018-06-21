@@ -4,9 +4,22 @@ const expect = chai.expect;
 const helloWorld = require('../../../src/controller/helloworld');
 
 describe('unit test hello world', () => {
-    it('should return hello world', () => {
-        const response = helloWorld.hello();
+    let actualError, actualResponse;
 
-        expect(response).to.equal('hello world!');
+    beforeEach((done) => {
+        helloWorld.hello({}, {}, (error, response) => {
+            actualError = error;
+            actualResponse = response;
+            done();
+        });
+    });
+
+    it('should not raise an error', () => {
+        expect(actualError).to.equal(null);
+    });
+
+    it('should yield the expected response', () => {
+        expect(actualResponse.statusCode).to.equal(200);
+        expect(actualResponse.body).to.equal('hello world!');
     });
 });

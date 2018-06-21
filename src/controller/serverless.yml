@@ -11,7 +11,7 @@ functions:
     handler: helloworld.hello
     events:
       - http:
-          path: controller
+          path: helloworld
           method: get
           cors: true
 
