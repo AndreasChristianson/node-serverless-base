@@ -1,0 +1,29 @@
+{
+  "name": "clicker",
+  "version": "1.0.0",
+  "description": "## How to Deploy: - run `serverless deploy` to deploy to AWS (may need to `npm install serverless`).",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "uuid": "^2.0.3"
+  },
+  "devDependencies": {
+    "serverless-domain-manager": "^2.3.0",
+    "serverless-plugin-optimize": "^3.0.4-rc.1"
+  },
+  "scripts": {
+    "test": "mocha --require co-mocha lib/**/**.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TonyBrobston/clicker.git"
+  },
+  "author": "Tony Brobston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TonyBrobston/clicker/issues"
+  },
+  "homepage": "https://github.com/TonyBrobston/clicker#readme"
+}

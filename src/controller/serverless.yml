@@ -1,0 +1,30 @@
+service: helloworld
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  region: us-east-1
+  stage: prod
+
+functions:
+  helloworld:
+    handler: helloworld.hello
+    events:
+      - http:
+          path: controller
+          method: get
+          cors: true
+
+plugins:
+  - serverless-domain-manager
+  - serverless-plugin-optimize
+
+package:
+  individually: true
+
+custom:
+  customDomain:
+    domainName: 'clicker-game.tonybrobston.com'
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
