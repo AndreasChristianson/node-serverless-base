@@ -16,16 +16,16 @@ yarn
 ## Serverless (run from the same folder as serverless.yaml)
 ### Deploy
 ```
-serverless deploy
+yarn deploy
 ```
 
 ### Teardown
 ```
-serverless remove
+yarn remove
 ```
 
 ## Test
-- build docker: `./run_build.sh`
-- unit: `./run_unit_tests.sh`
-- acceptance: `./run_acceptance_tests.sh`
-- both: `./run_tests.sh`
+```
+yarn test
+yarn acceptance-test
+```

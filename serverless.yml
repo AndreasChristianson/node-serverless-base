@@ -8,7 +8,7 @@ provider:
 
 functions:
   helloworld:
-    handler: helloworld.hello
+    handler: src/controller/helloworld.hello
     events:
       - http:
           path: helloworld
@@ -16,15 +16,15 @@ functions:
           cors: true
 
 plugins:
-  - serverless-domain-manager
+#  - serverless-domain-manager
   - serverless-plugin-optimize
 
 package:
   individually: true
 
-custom:
-  customDomain:
-    domainName: 'clicker-game.tonybrobston.com'
-    basePath: ''
-    stage: ${self:provider.stage}
-    createRoute53Record: true
+#custom:
+#  customDomain:
+#    domainName: 'clicker-game.tonybrobston.com'
+#    basePath: ''
+#    stage: ${self:provider.stage}
+#    createRoute53Record: true

@@ -7,14 +7,25 @@
     "test": "test"
   },
   "dependencies": {
+    "request": "^2.87.0",
     "uuid": "^2.0.3"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-json-pattern": "^1.1.0",
+    "chance": "^1.0.16",
+    "mocha": "^5.2.0",
     "serverless-domain-manager": "^2.3.0",
-    "serverless-plugin-optimize": "^3.0.4-rc.1"
+    "serverless-plugin-optimize": "^3.0.4-rc.1",
+    "sinon": "^6.0.1",
+    "sinon-chai": "^3.2.0"
   },
   "scripts": {
-    "test": "mocha --require co-mocha lib/**/**.spec.js"
+    "test": "mocha test/unit/**/**test.js",
+    "acceptance-test": "mocha test/acceptance/**/**test.js",
+    "deploy": "serverless deploy",
+    "undeploy": "serverless remove",
+    "smoketest": "serverless invoke --log true --function helloworld"
   },
   "repository": {
     "type": "git",
