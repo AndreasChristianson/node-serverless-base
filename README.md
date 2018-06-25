@@ -1,11 +1,15 @@
 # node-serverless-base
 
-## Setup
+## Dependancies
+- yarn (https://yarnpkg.com/en/docs/install#mac-stable)
+- serverless (https://serverless.com/framework/docs/getting-started/)
+
+## setup
 ```
 export AWS_ACCESS_KEY_ID=<your-key-here>
 export AWS_SECRET_ACCESS_KEY=<your-secret-key-here>
 ```
-## Get Dependencies
+## Node dependancies
 ```
 yarn
 ```
