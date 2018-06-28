@@ -21,8 +21,8 @@
     "sinon-chai": "^3.2.0"
   },
   "scripts": {
-    "test": "mocha test/unit/**/**test.js",
-    "acceptance-test": "mocha test/acceptance/**/**test.js",
+    "unit": "mocha test/unit/**/**test.js",
+    "acceptance": "mocha test/acceptance/**/**test.js",
     "deploy": "serverless deploy",
     "undeploy": "serverless remove",
     "smoketest": "serverless invoke --log true --function helloworld"

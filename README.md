@@ -26,6 +26,6 @@ yarn undeploy
 
 ## Test
 ```
-yarn test
-yarn acceptance-test
+yarn unit
+yarn acceptance
 ```
