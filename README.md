@@ -1,27 +1,31 @@
 # node-serverless-base
 
-## Setup
+## Dependancies
+- yarn (https://yarnpkg.com/en/docs/install#mac-stable)
+- serverless (https://serverless.com/framework/docs/getting-started/)
+
+## setup
 ```
 export AWS_ACCESS_KEY_ID=<your-key-here>
 export AWS_SECRET_ACCESS_KEY=<your-secret-key-here>
 ```
-## Get Dependencies
+## Node dependancies
 ```
 yarn
 ```
 ## Serverless (run from the same folder as serverless.yaml)
 ### Deploy
 ```
-serverless deploy
+yarn deploy
 ```
 
 ### Teardown
 ```
-serverless remove
+yarn remove
 ```
 
 ## Test
-- build docker: `./run_build.sh`
-- unit: `./run_unit_tests.sh`
-- acceptance: `./run_acceptance_tests.sh`
-- both: `./run_tests.sh`
+```
+yarn test
+yarn acceptance-test
+```
