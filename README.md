@@ -21,7 +21,7 @@ yarn deploy
 
 ### Teardown
 ```
-yarn remove
+yarn undeploy
 ```
 
 ## Test
