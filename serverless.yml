@@ -1,4 +1,4 @@
-service: helloworld
+service: nutrition
 
 provider:
   name: aws
@@ -8,23 +8,15 @@ provider:
 
 functions:
   helloworld:
-    handler: src/controller/helloworld.hello
+    handler: src/nutrition/get.get
     events:
       - http:
-          path: helloworld
+          path: nutrition/{upc}
           method: get
           cors: true
 
 plugins:
-#  - serverless-domain-manager
   - serverless-plugin-optimize
 
 package:
   individually: true
-
-#custom:
-#  customDomain:
-#    domainName: 'clicker-game.tonybrobston.com'
-#    basePath: ''
-#    stage: ${self:provider.stage}
-#    createRoute53Record: true

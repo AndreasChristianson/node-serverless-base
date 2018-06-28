@@ -1,41 +1,30 @@
 {
-  "name": "clicker",
+  "name": "nutrition",
   "version": "1.0.0",
-  "description": "## How to Deploy: - run `serverless deploy` to deploy to AWS (may need to `npm install serverless`).",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {
     "request": "^2.87.0",
     "uuid": "^2.0.3"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-json-pattern": "^1.1.0",
     "chance": "^1.0.16",
+    "eslint": "^5.0.1",
+    "eslint-config-get-off-my-lawn": "^4.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.10.0",
     "jest": "^23.2.0",
-    "mocha": "^5.2.0",
     "serverless-domain-manager": "^2.3.0",
-    "serverless-plugin-optimize": "^3.0.4-rc.1",
-    "sinon": "^6.0.1",
-    "sinon-chai": "^3.2.0"
+    "serverless-plugin-optimize": "^3.0.4-rc.1"
   },
   "scripts": {
     "unit": "jest",
-    "acceptance": "mocha test/acceptance/**/**test.js",
+    "acceptance": "mocha tests/acceptance/**/**test.js",
     "deploy": "serverless deploy",
     "undeploy": "serverless remove",
-    "smoketest": "serverless invoke --log true --function helloworld"
+    "smoketest": "serverless invoke --log true --function get",
+    "lint:js": "eslint ./src ./tests --ext .js --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TonyBrobston/clicker.git"
-  },
-  "author": "Tony Brobston",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TonyBrobston/clicker/issues"
-  },
-  "homepage": "https://github.com/TonyBrobston/clicker#readme"
+  "eslintConfig": {
+    "extends": "get-off-my-lawn"
+  }
 }
