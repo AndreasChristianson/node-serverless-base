@@ -1,6 +1,6 @@
 # node-serverless-base
 
-## Dependancies
+## Dependencies
 - yarn (https://yarnpkg.com/en/docs/install#mac-stable)
 - serverless (https://serverless.com/framework/docs/getting-started/)
 
