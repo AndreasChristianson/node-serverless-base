@@ -7,11 +7,11 @@ provider:
   stage: prod
 
 functions:
-  helloworld:
+  get:
     handler: src/nutrition/get.get
     events:
       - http:
-          path: nutrition/{upc}
+          path: nutrition
           method: get
           cors: true
 
